@@ -1,0 +1,125 @@
+Script started on Mon Aug 27 11:35:06 2018
+   : Loading /src/plan.sh
+   doha: Plan loaded
+   doha: Validating plan metadata
+   doha: Using HAB_BIN=/hab/pkgs/core/hab/0.61.0/20180815171844/bin/hab for installs, signing, and hashing
+   doha: hab-plan-build setup
+   doha: Writing pre_build file
+   doha: Resolving build dependencies
+   doha: Resolving run dependencies
+[1;33m» Installing qago/hab-shell[0m
+[1;32m☁ Determining[0m latest version of qago/hab-shell in the 'stable' channel
+[1;32m→ Using[0m qago/hab-shell/1.0/20180823181732
+[1;34m★ Install of qago/hab-shell/1.0/20180823181732 complete with 0 new packages installed.[0m
+   doha: Resolved dependency 'qago/hab-shell' to /hab/pkgs/qago/hab-shell/1.0/20180823181732
+[1;33m» Installing core/docker[0m
+[1;32m☁ Determining[0m latest version of core/docker in the 'stable' channel
+[1;32m→ Using[0m core/docker/18.03.0/20180608150948
+[1;34m★ Install of core/docker/18.03.0/20180608150948 complete with 0 new packages installed.[0m
+   doha: Resolved dependency 'core/docker' to /hab/pkgs/core/docker/18.03.0/20180608150948
+[1;33m» Installing core/docker-compose[0m
+[1;32m☁ Determining[0m latest version of core/docker-compose in the 'stable' channel
+[1;32m→ Using[0m core/docker-compose/1.21.0/20180718153539
+[1;34m★ Install of core/docker-compose/1.21.0/20180718153539 complete with 0 new packages installed.[0m
+   doha: Resolved dependency 'core/docker-compose' to /hab/pkgs/core/docker-compose/1.21.0/20180718153539
+[1;33m» Installing core/go[0m
+[1;32m☁ Determining[0m latest version of core/go in the 'stable' channel
+[1;32m→ Using[0m core/go/1.10.3/20180801151731
+[1;34m★ Install of core/go/1.10.3/20180801151731 complete with 0 new packages installed.[0m
+   doha: Resolved dependency 'core/go' to /hab/pkgs/core/go/1.10.3/20180801151731
+[1;33m» Installing core/dep[0m
+[1;32m☁ Determining[0m latest version of core/dep in the 'stable' channel
+[1;32m→ Using[0m core/dep/0.5.0/20180731174047
+[1;34m★ Install of core/dep/0.5.0/20180731174047 complete with 0 new packages installed.[0m
+   doha: Resolved dependency 'core/dep' to /hab/pkgs/core/dep/0.5.0/20180731174047
+[1;33m» Installing core/git[0m
+[1;32m☁ Determining[0m latest version of core/git in the 'stable' channel
+[1;32m☛ Verifying[0m core/git/2.18.0/20180806174821
+[1;32m→ Using[0m core/acl/2.2.52/20180608091922
+[1;32m→ Using[0m core/attr/2.4.47/20180608091914
+[1;32m→ Using[0m core/bzip2/1.0.6/20180608091727
+[1;32m→ Using[0m core/cacerts/2018.03.07/20180608102212
+[1;32m→ Using[0m core/coreutils/8.29/20180608092141
+[1;32m☛ Verifying[0m core/curl/7.54.1/20180608142121
+[1;32m☛ Verifying[0m core/db/5.3.28/20180608094030
+[1;32m→ Using[0m core/expat/2.2.5/20180608094017
+[1;32m→ Using[0m core/gcc-libs/7.3.0/20180608091701
+[1;32m→ Using[0m core/gdbm/1.14.1/20180608094002
+[1;32m☛ Verifying[0m core/gettext/0.19.8/20180608100147
+[1;32m→ Using[0m core/glibc/2.27/20180608041157
+[1;32m→ Using[0m core/gmp/6.1.2/20180608051426
+[1;32m☛ Verifying[0m core/less/530/20180608094202
+[1;32m→ Using[0m core/libcap/2.25/20180608091936
+[1;32m→ Using[0m core/linux-headers/4.15.9/20180608041107
+[1;32m→ Using[0m core/ncurses/6.1/20180608091810
+[1;32m☛ Verifying[0m core/nghttp2/1.31.0/20180608142107
+[1;32m☛ Verifying[0m core/openssh/7.5p1/20180608142228
+[1;32m→ Using[0m core/openssl/1.0.2n/20180608102213
+[1;32m→ Using[0m core/pcre/8.41/20180608092740
+[1;32m☛ Verifying[0m core/perl/5.26.1/20180608094208
+[1;32m☛ Verifying[0m core/xz/5.2.3/20180608100110
+[1;32m→ Using[0m core/zlib/1.2.11/20180608050617
+[1;32m✓ Installed[0m core/curl/7.54.1/20180608142121
+[1;32m✓ Installed[0m core/db/5.3.28/20180608094030
+[1;32m✓ Installed[0m core/gettext/0.19.8/20180608100147
+[1;32m✓ Installed[0m core/less/530/20180608094202
+[1;32m✓ Installed[0m core/nghttp2/1.31.0/20180608142107
+[1;32m✓ Installed[0m core/openssh/7.5p1/20180608142228
+[1;32m✓ Installed[0m core/perl/5.26.1/20180608094208
+[1;32m✓ Installed[0m core/xz/5.2.3/20180608100110
+[1;32m✓ Installed[0m core/git/2.18.0/20180806174821
+[1;34m★ Install of core/git/2.18.0/20180806174821 complete with 9 new packages installed.[0m
+   doha: Resolved dependency 'core/git' to /hab/pkgs/core/git/2.18.0/20180806174821
+   doha: Setting up environment
+   doha: Populating runtime environment from dependencies
+   doha: Populating buildtime environment from dependencies
+   doha: Layering runtime environment on top of system environment
+   doha: Layering buildtime environment on top of system environment
+   doha: Setting PATH=/hab/pkgs/qago/hab-shell/1.0/20180823181732/bin:/hab/pkgs/core/docker/18.03.0/20180608150948/bin:/hab/pkgs/core/docker-compose/1.21.0/20180718153539/bin:/hab/pkgs/core/go/1.10.3/20180801151731/bin:/hab/pkgs/core/dep/0.5.0/20180731174047/bin:/hab/pkgs/core/git/2.18.0/20180806174821/bin:/hab/pkgs/core/acl/2.2.52/20180608091922/bin:/hab/pkgs/core/attr/2.4.47/20180608091914/bin:/hab/pkgs/core/bash/4.4.19/20180608092913/bin:/hab/pkgs/core/coreutils/8.29/20180608092141/bin:/hab/pkgs/core/gawk/4.2.0/20180608093856/bin:/hab/pkgs/core/glibc/2.27/20180608041157/bin:/hab/pkgs/core/grep/3.1/20180608092809/bin:/hab/pkgs/core/hab/0.61.0/20180815171844/bin:/hab/pkgs/core/libcap/2.25/20180608091936/bin:/hab/pkgs/core/ncurses/6.1/20180608091810/bin:/hab/pkgs/core/pcre/8.41/20180608092740/bin:/hab/pkgs/core/sed/4.4/20180608091938/bin:/hab/pkgs/core/sudo/1.8.18p1/20180609192018/bin:/hab/pkgs/core/sudo/1.8.18p1/20180609192018/sbin:/hab/pkgs/core/vim/8.0.1542/20180608104326/bin:/hab/pkgs/core/binutils/2.30/20180608050633/bin:/hab/pkgs/core/bzip2/1.0.6/20180608091727/bin:/hab/pkgs/core/expat/2.2.5/20180608094017/bin:/hab/pkgs/core/gdbm/1.14.1/20180608094002/bin:/hab/pkgs/core/libtool/2.4.6/20180608093951/bin:/hab/pkgs/core/openssl/1.0.2n/20180608102213/bin:/hab/pkgs/core/python/3.7.0/20180718152937/bin:/hab/pkgs/core/sqlite/3130000/20180608141313/bin:/hab/pkgs/core/curl/7.54.1/20180608142121/bin:/hab/pkgs/core/db/5.3.28/20180608094030/bin:/hab/pkgs/core/gettext/0.19.8/20180608100147/bin:/hab/pkgs/core/less/530/20180608094202/bin:/hab/pkgs/core/openssh/7.5p1/20180608142228/bin:/hab/pkgs/core/openssh/7.5p1/20180608142228/sbin:/hab/pkgs/core/openssh/7.5p1/20180608142228/libexec:/hab/pkgs/core/perl/5.26.1/20180608094208/bin:/hab/pkgs/core/xz/5.2.3/20180608100110/bin:/hab/pkgs/core/hab-plan-build/0.61.0/20180815173114/bin:/hab/pkgs/core/bash/4.3.42/20170513213519/bin:/hab/pkgs/core/binutils/2.25.1/20170513201927/bin:/hab/pkgs/core/bzip2/1.0.6/20170513212938/bin:/hab/pkgs/core/coreutils/8.25/20170513213226/bin:/hab/pkgs/core/file/5.24/20170513201915/bin:/hab/pkgs/core/findutils/4.4.2/20170513214305/bin:/hab/pkgs/core/gawk/4.1.3/20170513213646/bin:/hab/pkgs/core/grep/2.22/20170513213444/bin:/hab/pkgs/core/gzip/1.6/20170513214605/bin:/hab/pkgs/core/hab/0.61.0/20180815171844/bin:/hab/pkgs/core/rq/0.9.2/20170612005822/bin:/hab/pkgs/core/sed/4.2.2/20170513213123/bin:/hab/pkgs/core/tar/1.29/20170513213607/bin:/hab/pkgs/core/unzip/6.0/20180310001951/bin:/hab/pkgs/core/wget/1.19.1/20171024102323/bin:/hab/pkgs/core/xz/5.2.2/20170513214327/bin:/hab/pkgs/core/glibc/2.22/20170513201042/bin:/hab/pkgs/core/ncurses/6.0/20170513213009/bin:/hab/pkgs/core/acl/2.2.52/20170513213108/bin:/hab/pkgs/core/attr/2.4.47/20170513213059/bin:/hab/pkgs/core/libcap/2.24/20170513213120/bin:/hab/pkgs/core/pcre/8.38/20170513213423/bin:/hab/pkgs/core/less/481/20170513213936/bin:/hab/pkgs/core/libidn/1.32/20170513215043/bin:/hab/pkgs/core/openssl/1.0.2l/20171014213633/bin
+   doha: Clean the cache
+   doha: Setting build environment
+mkdir: created directory '/hab/cache/src/doha-1.0.11'
+   doha: Setting PREFIX=/hab/pkgs/hab-shell/doha/1.0.11/20180827113506
+   doha: Setting LD_RUN_PATH=/hab/pkgs/core/git/2.18.0/20180806174821/lib
+   doha: Setting CFLAGS=
+   doha: Setting CXXFLAGS=
+   doha: Setting CPPFLAGS=
+   doha: Setting LDFLAGS=-L/hab/pkgs/core/git/2.18.0/20180806174821/lib
+   doha: Setting PKG_CONFIG_PATH=
+   doha: Preparing to build
+   doha: Building
+   doha: Installing
+mkdir: created directory '/hab/pkgs/hab-shell/doha/1.0.11'
+mkdir: created directory '/hab/pkgs/hab-shell/doha/1.0.11/20180827113506'
+   doha: Writing configuration
+   doha: Writing service management scripts
+   doha: Stripping unneeded symbols from binaries and libraries
+   doha: Building package metadata
+   doha: Generating blake2b hashes of all files in the package
+   doha: Generating signed metadata FILES
+[1;33m» Signing doha_blake2bsums[0m
+[1;36m☛ Signing[0m doha_blake2bsums with hab-shell-20180516112716 to create /hab/pkgs/hab-shell/doha/1.0.11/20180827113506/FILES
+[1;34m★ Signed artifact /hab/pkgs/hab-shell/doha/1.0.11/20180827113506/FILES.[0m
+   doha: Creating manifest
+   doha: Generating package artifact
+/hab/pkgs/core/tar/1.29/20170513213607/bin/tar: Removing leading `/' from member names
+/hab/cache/artifacts/.hab-shell-doha-1.0.11-20180827113506-x86_64-linux.tar (1/1)
+  100 %           2184 B / 20.0 KiB = 0.107                                    
+[1;33m» Signing /hab/cache/artifacts/.hab-shell-doha-1.0.11-20180827113506-x86_64-linux.tar.xz[0m
+[1;36m☛ Signing[0m /hab/cache/artifacts/.hab-shell-doha-1.0.11-20180827113506-x86_64-linux.tar.xz with hab-shell-20180516112716 to create /hab/cache/artifacts/hab-shell-doha-1.0.11-20180827113506-x86_64-linux.hart
+[1;34m★ Signed artifact /hab/cache/artifacts/hab-shell-doha-1.0.11-20180827113506-x86_64-linux.hart.[0m
+'/hab/cache/artifacts/hab-shell-doha-1.0.11-20180827113506-x86_64-linux.hart' -> '/src/results/hab-shell-doha-1.0.11-20180827113506-x86_64-linux.hart'
+   doha: hab-plan-build cleanup
+   doha: 
+   doha: Source Path: /src
+   doha: Installed Path: /hab/pkgs/hab-shell/doha/1.0.11/20180827113506
+   doha: Artifact: /src/results/hab-shell-doha-1.0.11-20180827113506-x86_64-linux.hart
+   doha: Build Report: /src/results/last_build.env
+   doha: SHA256 Checksum: b83313fcd64e65d2a736fc2944bf5908d5a1e1c6b91fa46e5f765388ba32c4c8
+   doha: Blake2b Checksum: 2cb22144f6fad61472ba96ace1eb25b1793468a5e5a5209613187879afe5bea6
+   doha: 
+   doha: I love it when a plan.sh comes together.
+   doha: 
+   doha: Build time: 0m15s
+
+Script done on Mon Aug 27 11:35:21 2018

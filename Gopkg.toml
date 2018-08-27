@@ -1,0 +1,4 @@
+required=[
+    "golang.org/x/lint/golint"
+]
+
