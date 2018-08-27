@@ -2,3 +2,10 @@ required=[
     "golang.org/x/lint/golint"
 ]
 
+[[override]]
+  name = "github.com/docker/distribution"
+  branch = "master"
+
+[[constraint]]
+  name = "github.com/docker/docker"
+  version = "v17.05.0-ce"
