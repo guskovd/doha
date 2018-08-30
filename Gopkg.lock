@@ -19,14 +19,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:83e0db9cd84a70925c0948c000a0f4557403fa7d87931d42c66fb9fe751dd795"
+  digest = "1:93d6cc7901f59ec830068354781240456aa32d62eb47e3c29d6e91872b49a378"
   name = "github.com/docker/distribution"
   packages = [
     "digestset",
     "reference",
   ]
   pruneopts = ""
-  revision = "3354cf98e3a55ca01d9712714f2c69531abc2347"
+  revision = "059f301d548d58085032e6af149a08352221f792"
 
 [[projects]]
   digest = "1:5cfe5235948cd397339690c8569099948365ad478de48b462837061c5db31d7f"
@@ -86,6 +86,22 @@
   revision = "aabc10ec26b754e797f9028f4589c5b7bd90dc20"
 
 [[projects]]
+  digest = "1:870d441fe217b8e689d7949fef6e43efbc787e50f200cb1e70dbca9204a1d6be"
+  name = "github.com/inconshreveable/mousetrap"
+  packages = ["."]
+  pruneopts = ""
+  revision = "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+  version = "v1.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:79d3b9306bdb32175bd1b42924b17a3c38be3a30fc49efdbec8a4a03e69923d6"
+  name = "github.com/jhoonb/archivex"
+  packages = ["."]
+  pruneopts = ""
+  revision = "0488e4ce168110297b49ad60bee94d38de70dd8a"
+
+[[projects]]
   digest = "1:5d9b668b0b4581a978f07e7d2e3314af18eb27b3fb5d19b70185b7c575723d11"
   name = "github.com/opencontainers/go-digest"
   packages = ["."]
@@ -100,6 +116,22 @@
   pruneopts = ""
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
+
+[[projects]]
+  digest = "1:a1403cc8a94b8d7956ee5e9694badef0e7b051af289caad1cf668331e3ffa4f6"
+  name = "github.com/spf13/cobra"
+  packages = ["."]
+  pruneopts = ""
+  revision = "ef82de70bb3f60c65fb8eebacbb2d122ef517385"
+  version = "v0.0.3"
+
+[[projects]]
+  digest = "1:0a52bcb568386d98f4894575d53ce3e456f56471de6897bb8b9de13c33d9340e"
+  name = "github.com/spf13/pflag"
+  packages = ["."]
+  pruneopts = ""
+  revision = "9a97c102cda95a86cec2345a6f09f55a939babf5"
+  version = "v1.0.2"
 
 [[projects]]
   branch = "master"
@@ -135,14 +167,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:7a5f7a1206de6b90f67cb465e489eac3298e95afa7262813b542df4fab38952f"
+  digest = "1:79b4fb7cfed68c4d0727858bd32dbe3be4b97ea58e2d767f92287f67810cbc98"
   name = "golang.org/x/sys"
   packages = [
     "unix",
     "windows",
   ]
   pruneopts = ""
-  revision = "4910a1d54f876d7b22162a85f4d066d3ee649450"
+  revision = "d99a578cf41bfccdeaf48b0845c823a4b8b0ad5e"
 
 [[projects]]
   branch = "master"
@@ -164,6 +196,8 @@
     "github.com/docker/docker/api/types",
     "github.com/docker/docker/api/types/container",
     "github.com/docker/docker/client",
+    "github.com/jhoonb/archivex",
+    "github.com/spf13/cobra",
     "golang.org/x/lint/golint",
     "golang.org/x/net/context",
   ]

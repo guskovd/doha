@@ -6,6 +6,6 @@ required=[
   name = "github.com/docker/distribution"
   branch = "master"
 
-[[constraint]]
+[[override]]
   name = "github.com/docker/docker"
   version = "v17.05.0-ce"

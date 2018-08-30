@@ -1,6 +1,6 @@
 pkg_name=doha
 pkg_origin=guskovd
-pkg_version='1.0.11'
+pkg_version='1.0.12'
 pkg_description="doha"
 pkg_maintainer='guskovd'
 pkg_upstream_url="https://github.com/guskovd/doha"
@@ -14,6 +14,9 @@ pkg_deps=(
     core/go
     core/dep
     core/git
+    core/wget
+    core/tar
+    core/gzip
 )
 
 do_shell() {
