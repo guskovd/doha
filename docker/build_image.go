@@ -13,14 +13,16 @@ import (
 	"golang.org/x/net/context"
 )
 
-var dockerFileContent = []byte(`FROM dguskov/doha:base
+var dockerFileContent = []byte(`
+FROM docker.io/dguskov/doha:base
 
 ARG username=guest
 ARG userid=1000
 ARG groupname=guest
 ARG groupid=1000
 
-RUN echo hello
+RUN addgroup -g $groupid -S $groupname 
+RUN adduser -D -g $groupid -G wheel -u $userid -H $username
 `)
 
 // BuildImage common
@@ -49,27 +51,26 @@ func BuildImage() {
 	ctx := context.Background()
 	dockerBuildContext, err := os.Open(tarfile.Name())
 
-	cli, err := client.NewEnvClient()
+	cli, err := client.NewClient("unix:///var/run/docker.sock", "", nil, nil)
 
 	current_user, err := user.Current()
 	current_group, err := user.LookupGroupId(current_user.Gid)
 
-	fmt.Println(&current_group.Name)
-	
 	buildOptions := types.ImageBuildOptions{
 		Tags: []string{"doha:local"},
-		// BuildArgs: map[string]*string{
-		// 	"username": &current_user.Username,
-		// 	"userid": &current_user.Uid,
-		// 	"groupid": &current_user.Gid,
-		// 	"groupname": &current_group.Name,
-		// },
+		SuppressOutput: true, // need!
+		BuildArgs: map[string]*string{
+			"username": &current_user.Username,
+			"userid": &current_user.Uid,
+			"groupid": &current_user.Gid,
+			"groupname": &current_group.Name,
+		},
 	}
 
 	_, err1 := cli.ImageBuild(ctx, dockerBuildContext, buildOptions)
 
 	if err1 != nil {
-		log.Fatal(err)
+		log.Fatal(err1)
 	}
 }
 
