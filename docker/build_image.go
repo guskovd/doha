@@ -56,10 +56,10 @@ func BuildImage() {
 	current_user, err := user.Current()
 	current_group, err := user.LookupGroupId(current_user.Gid)
 
-	log.Println(&current_user.Username)
-	log.Println(&current_user.Uid)
-	log.Println(&current_user.Gid)
-	log.Println(&current_user.Gid)
+	log.Println(current_user.Username)
+	log.Println(current_user.Uid)
+	log.Println(current_user.Gid)
+	log.Println(current_group.Name)
 
 	buildOptions := types.ImageBuildOptions{
 		Tags: []string{DohaImageLocal},
