@@ -68,7 +68,7 @@ func BuildImage() {
 		BuildArgs: map[string]*string{
 			"username": &current_user.Username,
 			"userid": &current_user.Uid,
-			"groupid": &current_user.Gid,
+			// "groupid": &current_user.Gid,
 			"groupname": &current_group.Name,
 		},
 	}
