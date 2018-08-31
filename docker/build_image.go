@@ -57,7 +57,7 @@ func BuildImage() {
 	current_group, err := user.LookupGroupId(current_user.Gid)
 
 	buildOptions := types.ImageBuildOptions{
-		Tags: []string{"doha:local"},
+		Tags: []string{DohaImageLocal},
 		SuppressOutput: true, // need!
 		BuildArgs: map[string]*string{
 			"username": &current_user.Username,
