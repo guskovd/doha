@@ -6,11 +6,12 @@ import (
 	"io/ioutil"
 	"fmt"
 	"os/user"
+	"os/exec"
 
-	"github.com/jhoonb/archivex"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
-	"golang.org/x/net/context"
+	// "github.com/jhoonb/archivex"
+	// "github.com/docker/docker/api/types"
+	// "github.com/docker/docker/client"
+	// "golang.org/x/net/context"
 )
 
 var dockerFileContent = []byte(`
@@ -31,52 +32,80 @@ func BuildImage() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	// defer os.RemoveAll(tmpdir)
+	defer os.RemoveAll(tmpdir)
 
 	fo, err := os.Create(fmt.Sprintf("%s/Dockerfile", tmpdir))
 	fo.Write(dockerFileContent)
 	fo.Close()
 
-	tarfile, err := ioutil.TempFile("", "dohaDockerfileTar")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	tar := new(archivex.TarFile)
-	// defer os.Remove(tarfile.Name())
-
-	tar.Create(tarfile.Name())
-	tar.AddAll(tmpdir, false)
-
-	ctx := context.Background()
-	dockerBuildContext, err := os.Open(tarfile.Name())
-
-	cli, err := client.NewEnvClient()
-
 	current_user, err := user.Current()
 	current_group, err := user.LookupGroupId(current_user.Gid)
 
-	log.Println(current_user.Username)
-	log.Println(current_user.Uid)
-	log.Println(current_user.Gid)
-	log.Println(current_group.Name)
-
-	buildOptions := types.ImageBuildOptions{
-		Tags: []string{DohaImageLocal},
-		SuppressOutput: true, // need!
-		PullParent: true,
-		BuildArgs: map[string]*string{
-			"username": &current_user.Username,
-			"userid": &current_user.Uid,
-			// "groupid": &current_user.Gid,
-			"groupname": &current_group.Name,
-		},
+	docker_binary, lookErr := exec.LookPath("docker")
+	fmt.Println(docker_binary)
+	fmt.Println(current_group)
+	
+	if lookErr != nil {
+		panic(lookErr)
 	}
 
-	_, err1 := cli.ImageBuild(ctx, dockerBuildContext, buildOptions)
+	out, execErr := exec.Command(
+		docker_binary,
+		"build",
+		"--build-arg", fmt.Sprintf("username=%s", current_user.Username),
+		"--build-arg", fmt.Sprintf("userid=%s", current_user.Uid),
+		"--build-arg", fmt.Sprintf("groupname=%s", current_group.Name),
+		"--build-arg", fmt.Sprintf("groupid=%s", current_group.Gid),
+		"-t", DohaImageLocal,
+		tmpdir,
+	).CombinedOutput()
 
-	if err1 != nil {
-		log.Fatal(err1)
+	if execErr != nil {
+		log.Fatal(string(out))
+		log.Fatal(lookErr)
 	}
+		
+
+	// tarfile, err := ioutil.TempFile("", "dohaDockerfileTar")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// tar := new(archivex.TarFile)
+	// // defer os.Remove(tarfile.Name())
+
+	// tar.Create(tarfile.Name())
+	// tar.AddAll(tmpdir, false)
+
+	// ctx := context.Background()
+	// dockerBuildContext, err := os.Open(tarfile.Name())
+
+	// cli, err := client.NewEnvClient()
+
+	// current_user, err := user.Current()
+	// current_group, err := user.LookupGroupId(current_user.Gid)
+
+	// log.Println(current_user.Username)
+	// log.Println(current_user.Uid)
+	// log.Println(current_user.Gid)
+	// log.Println(current_group.Name)
+
+	// buildOptions := types.ImageBuildOptions{
+	// 	Tags: []string{DohaImageLocal},
+	// 	SuppressOutput: true, // need!
+	// 	PullParent: true,
+	// 	BuildArgs: map[string]*string{
+	// 		"username": &current_user.Username,
+	// 		"userid": &current_user.Uid,
+	// 		// "groupid": &current_user.Gid,
+	// 		"groupname": &current_group.Name,
+	// 	},
+	// }
+
+	// _, err1 := cli.ImageBuild(ctx, dockerBuildContext, buildOptions)
+
+	// if err1 != nil {
+	// 	log.Fatal(err1)
+	// }
 }
 
