@@ -13,6 +13,7 @@ For many years people have printed back to the screen.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		docker.BuildImage()
 		docker.StartDaemonIfNotRunning()
+		docker.ContainerExec()
 	},
 }
 
