@@ -59,6 +59,7 @@ func BuildImage() {
 	buildOptions := types.ImageBuildOptions{
 		Tags: []string{DohaImageLocal},
 		SuppressOutput: true, // need!
+		PullParent: true,
 		BuildArgs: map[string]*string{
 			"username": &current_user.Username,
 			"userid": &current_user.Uid,
