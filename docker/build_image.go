@@ -51,7 +51,7 @@ func BuildImage() {
 	ctx := context.Background()
 	dockerBuildContext, err := os.Open(tarfile.Name())
 
-	cli, err := client.NewClient("unix:///var/run/docker.sock", "", nil, nil)
+	cli, err := client.NewEnvClient()
 
 	current_user, err := user.Current()
 	current_group, err := user.LookupGroupId(current_user.Gid)
