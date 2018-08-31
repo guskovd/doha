@@ -94,14 +94,6 @@
   version = "v1.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:79d3b9306bdb32175bd1b42924b17a3c38be3a30fc49efdbec8a4a03e69923d6"
-  name = "github.com/jhoonb/archivex"
-  packages = ["."]
-  pruneopts = ""
-  revision = "0488e4ce168110297b49ad60bee94d38de70dd8a"
-
-[[projects]]
   digest = "1:5d9b668b0b4581a978f07e7d2e3314af18eb27b3fb5d19b70185b7c575723d11"
   name = "github.com/opencontainers/go-digest"
   packages = ["."]
@@ -195,8 +187,8 @@
   input-imports = [
     "github.com/docker/docker/api/types",
     "github.com/docker/docker/api/types/container",
+    "github.com/docker/docker/api/types/mount",
     "github.com/docker/docker/client",
-    "github.com/jhoonb/archivex",
     "github.com/spf13/cobra",
     "golang.org/x/lint/golint",
     "golang.org/x/net/context",
