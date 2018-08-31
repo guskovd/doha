@@ -31,7 +31,7 @@ func BuildImage() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer os.RemoveAll(tmpdir)
+	// defer os.RemoveAll(tmpdir)
 
 	fo, err := os.Create(fmt.Sprintf("%s/Dockerfile", tmpdir))
 	fo.Write(dockerFileContent)
@@ -43,7 +43,7 @@ func BuildImage() {
 	}
 
 	tar := new(archivex.TarFile)
-	defer os.Remove(tarfile.Name())
+	// defer os.Remove(tarfile.Name())
 
 	tar.Create(tarfile.Name())
 	tar.AddAll(tmpdir, false)
@@ -55,6 +55,11 @@ func BuildImage() {
 
 	current_user, err := user.Current()
 	current_group, err := user.LookupGroupId(current_user.Gid)
+
+	log.Println(&current_user.Username)
+	log.Println(&current_user.Uid)
+	log.Println(&current_user.Gid)
+	log.Println(&current_user.Gid)
 
 	buildOptions := types.ImageBuildOptions{
 		Tags: []string{DohaImageLocal},
