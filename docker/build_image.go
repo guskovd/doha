@@ -38,8 +38,6 @@ func BuildImage() {
 	current_group, err := user.LookupGroupId(current_user.Gid)
 
 	docker_binary, lookErr := exec.LookPath("docker")
-	fmt.Println(docker_binary)
-	fmt.Println(current_group)
 	
 	if lookErr != nil {
 		panic(lookErr)
@@ -51,7 +49,7 @@ func BuildImage() {
 		"--build-arg", fmt.Sprintf("username=%s", current_user.Username),
 		"--build-arg", fmt.Sprintf("userid=%s", current_user.Uid),
 		"--build-arg", fmt.Sprintf("groupname=%s", current_group.Name),
-		"--build-arg", fmt.Sprintf("groupid=%s", current_group.Gid),
+		// "--build-arg", fmt.Sprintf("groupid=%s", current_group.Gid),
 		"-t", DohaImageLocal,
 		tmpdir,
 	).CombinedOutput()
