@@ -4,8 +4,6 @@ import (
 	"syscall"
 	"os"
 	"os/exec"
-
-	"fmt"
 )
 
 func ContainerExec() {
@@ -19,8 +17,6 @@ func ContainerExec() {
 		panic(err)
 	}
 
-	fmt.Println(pwd)
-	
 	syscall.Exec(
 		docker_binary,
 		[]string{
@@ -29,5 +25,6 @@ func ContainerExec() {
 			"-ti", "doha",
 			"/bin/bash",
 		},
-		os.Environ())
+		os.Environ(),
+	)
 }

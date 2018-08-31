@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/user"
+	"log"
 	
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"
@@ -37,20 +38,25 @@ func RunContainer() {
 		panic(err)
 	}
 
+	log.Println("Starting doha daemon ...")
 	resp, err := cli.ContainerCreate(
 		ctx,
 		&container.Config{
 			Image: DohaImageLocal,
 			Cmd: []string{"tail", "-f", "/dev/null"},
 			User: fmt.Sprintf("%s:%s", current_user.Uid, current_user.Gid),
-			// Volumes: map[string]struct{}{"/hab:/hab": {}},
 		},
 		&container.HostConfig{
 			Mounts: []mount.Mount{
 				{
-					Type:   mount.TypeBind,
-					Source: "/hab",
+					Type:   mount.TypeVolume,
+					Source: "hab",
 					Target: "/hab",
+				},
+				{
+					Type:   mount.TypeBind,
+					Source: "/var/run/docker.sock",
+					Target: "/var/run/docker.sock",
 				},
 				{
 					Type:   mount.TypeBind,
