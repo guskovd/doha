@@ -31,7 +31,7 @@ func BuildImage() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer os.Remove(tmpdir)
+	defer os.RemoveAll(tmpdir)
 
 	fo, err := os.Create(fmt.Sprintf("%s/Dockerfile", tmpdir))
 	fo.Write(dockerFileContent)
