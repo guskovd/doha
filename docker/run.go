@@ -22,12 +22,17 @@ func StartDaemonIfNotRunning() {
 		panic(err)
 	}
 
-	_, err1 := cli.ContainerInspect(context.Background(), DohaContainerName)
-	if err1 != nil {
+	resp, err := cli.ContainerInspect(context.Background(), DohaContainerName)
+
+	if err != nil {
+		RunContainer()
+	} else if(resp.State.Running == false) {
+		log.Println("Doha daemon in Dead state. Restarting ...")
+		StopContainer()
 		RunContainer()
 	}
-
 }
+
 
 func RunContainer() {
 	ctx := context.Background()
