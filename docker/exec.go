@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-func ContainerExec() {
+func ContainerExec(args []string) {
 	docker_binary, lookErr := exec.LookPath("docker")
 	if lookErr != nil {
 		panic(lookErr)
@@ -19,12 +19,11 @@ func ContainerExec() {
 
 	syscall.Exec(
 		docker_binary,
-		[]string{
+		append([]string{
 			"docker", "exec",
 			"-w", pwd,
 			"-ti", "doha",
-			"/bin/bash",
-		},
+		}, args...),
 		os.Environ(),
 	)
 }

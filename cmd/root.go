@@ -19,7 +19,8 @@ var rootCmd = &cobra.Command{
 
 // Execute common
 func Execute() {
-	rootCmd.AddCommand(shell);
+	rootCmd.AddCommand(shell)
+	rootCmd.AddCommand(exec)
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)

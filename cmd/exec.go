@@ -5,13 +5,14 @@ import (
 	"github.com/guskovd/doha/docker"
 )
 
-var shell = &cobra.Command{
-	Use:   "shell [doha shell]",
-	Short: "Invoke doha shell",
+var exec = &cobra.Command{
+	Use:   "exec [doha exec]",
+	Short: "Invoke doha exec commmand",
+	Args: cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		docker.BuildImage()
 		docker.StartDaemonIfNotRunning()
-		docker.ContainerExec([]string{"/bin/bash"})
+		docker.ContainerExec(args)
 	},
 }
 
