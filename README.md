@@ -4,8 +4,16 @@ Save the corresponding binary in the directory included in the PATH environment 
 
 E.G: /usr/local/bin/doha
 
-Usage:
+## Usage:
+
+### doha shell
 
 ```bash
 doha shell
+```
+
+### doha exec
+
+```bash
+doha exec -- which hab
 ```
