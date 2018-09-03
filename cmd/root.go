@@ -22,6 +22,7 @@ func Execute() {
 	rootCmd.AddCommand(start)
 	rootCmd.AddCommand(shell)
 	rootCmd.AddCommand(exec)
+	rootCmd.AddCommand(stop)
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)

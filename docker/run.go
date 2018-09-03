@@ -22,7 +22,7 @@ func StartDaemonIfNotRunning() {
 		panic(err)
 	}
 
-	_, err1 := cli.ContainerInspect(context.Background(), "doha")
+	_, err1 := cli.ContainerInspect(context.Background(), DohaContainerName)
 	if err1 != nil {
 		RunContainer()
 	}
@@ -66,7 +66,7 @@ func RunContainer() {
 			},
 		},
 		nil,
-		"doha",
+		DohaContainerName,
 	)
 	if err != nil {
 		panic(err)
