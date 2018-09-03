@@ -19,6 +19,7 @@ var rootCmd = &cobra.Command{
 
 // Execute common
 func Execute() {
+	rootCmd.AddCommand(start)
 	rootCmd.AddCommand(shell)
 	rootCmd.AddCommand(exec)
 	if err := rootCmd.Execute(); err != nil {
