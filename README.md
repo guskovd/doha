@@ -18,3 +18,18 @@ doha shell
 doha exec -- which hab
 ```
 
+### doha start
+
+Start doha daemon:
+
+```bash
+doha start
+```
+
+### doha stop
+
+Stop doha daemon:
+
+```bash
+doha stop
+```
