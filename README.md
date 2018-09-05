@@ -1,5 +1,13 @@
 # doha - Docker virtual environment for Habitat.sh
 
+## Installation via golang package manager:
+
+```
+go get -u github.com/guskovd/doha
+```
+
+## Installation via binary:
+
 Save the corresponding binary in the directory included in the PATH environment variable (/usr/bin, /usr/local/bin, etc ...)
 
 e.g. /usr/local/bin/doha
