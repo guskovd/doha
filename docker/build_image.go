@@ -1,13 +1,12 @@
 package docker
 
 import (
-	"os"
-	"log"
-	"io/ioutil"
 	"fmt"
-	"os/user"
+	"io/ioutil"
+	"log"
+	"os"
 	"os/exec"
-
+	"os/user"
 )
 
 var dockerFileContent = []byte(`
@@ -19,7 +18,7 @@ ARG groupname=guest
 ARG groupid=1000
 
 RUN addgroup -g $groupid -S $groupname 
-RUN adduser -D -g $groupid -G wheel -u $userid -H $username
+RUN adduser -D -g $groupid -G wheel -u $userid -h $homedir $username
 `)
 
 // BuildImage common
@@ -38,7 +37,7 @@ func BuildImage() {
 	current_group, err := user.LookupGroupId(current_user.Gid)
 
 	docker_binary, lookErr := exec.LookPath("docker")
-	
+
 	if lookErr != nil {
 		panic(lookErr)
 	}
@@ -49,6 +48,7 @@ func BuildImage() {
 		"--build-arg", fmt.Sprintf("username=%s", current_user.Username),
 		"--build-arg", fmt.Sprintf("userid=%s", current_user.Uid),
 		"--build-arg", fmt.Sprintf("groupname=%s", current_group.Name),
+		"--build-arg", fmt.Sprintf("homedir=%s", os.Getenv("HOME")),
 		// "--build-arg", fmt.Sprintf("groupid=%s", current_group.Gid),
 		"-t", DohaImageLocal,
 		tmpdir,
@@ -59,4 +59,3 @@ func BuildImage() {
 		log.Fatal(lookErr)
 	}
 }
-
