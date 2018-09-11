@@ -16,6 +16,7 @@ ARG username=guest
 ARG userid=1000
 ARG groupname=guest
 ARG groupid=1000
+ARG homedir=/home/guest
 
 RUN addgroup -g $groupid -S $groupname 
 RUN adduser -D -g $groupid -G wheel -u $userid -h $homedir $username
