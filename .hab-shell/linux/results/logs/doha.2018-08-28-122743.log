@@ -1,132 +1,0 @@
-Script started on Tue Aug 28 12:27:43 2018
-   : Loading /src/plan.sh
-   doha: Plan loaded
-   doha: Validating plan metadata
-   doha: Using HAB_BIN=/hab/pkgs/core/hab/0.61.0/20180815171844/bin/hab for installs, signing, and hashing
-   doha: hab-plan-build setup
-   doha: Writing pre_build file
-   doha: Resolving build dependencies
-   doha: Resolving run dependencies
-[1;33m» Installing qago/hab-shell[0m
-[1;32m☁ Determining[0m latest version of qago/hab-shell in the 'stable' channel
-[1;32m→ Using[0m qago/hab-shell/1.0/20180823181732
-[1;34m★ Install of qago/hab-shell/1.0/20180823181732 complete with 0 new packages installed.[0m
-   doha: Resolved dependency 'qago/hab-shell' to /hab/pkgs/qago/hab-shell/1.0/20180823181732
-[1;33m» Installing core/docker[0m
-[1;32m☁ Determining[0m latest version of core/docker in the 'stable' channel
-[1;32m→ Using[0m core/docker/18.03.0/20180608150948
-[1;34m★ Install of core/docker/18.03.0/20180608150948 complete with 0 new packages installed.[0m
-   doha: Resolved dependency 'core/docker' to /hab/pkgs/core/docker/18.03.0/20180608150948
-[1;33m» Installing core/docker-compose[0m
-[1;32m☁ Determining[0m latest version of core/docker-compose in the 'stable' channel
-[1;32m→ Using[0m core/docker-compose/1.21.0/20180718153539
-[1;34m★ Install of core/docker-compose/1.21.0/20180718153539 complete with 0 new packages installed.[0m
-   doha: Resolved dependency 'core/docker-compose' to /hab/pkgs/core/docker-compose/1.21.0/20180718153539
-[1;33m» Installing core/go[0m
-[1;32m☁ Determining[0m latest version of core/go in the 'stable' channel
-[1;32m→ Using[0m core/go/1.10.3/20180801151731
-[1;34m★ Install of core/go/1.10.3/20180801151731 complete with 0 new packages installed.[0m
-   doha: Resolved dependency 'core/go' to /hab/pkgs/core/go/1.10.3/20180801151731
-[1;33m» Installing core/dep[0m
-[1;32m☁ Determining[0m latest version of core/dep in the 'stable' channel
-[1;32m→ Using[0m core/dep/0.5.0/20180731174047
-[1;34m★ Install of core/dep/0.5.0/20180731174047 complete with 0 new packages installed.[0m
-   doha: Resolved dependency 'core/dep' to /hab/pkgs/core/dep/0.5.0/20180731174047
-[1;33m» Installing core/git[0m
-[1;32m☁ Determining[0m latest version of core/git in the 'stable' channel
-[1;32m→ Using[0m core/git/2.18.0/20180806174821
-[1;34m★ Install of core/git/2.18.0/20180806174821 complete with 0 new packages installed.[0m
-   doha: Resolved dependency 'core/git' to /hab/pkgs/core/git/2.18.0/20180806174821
-[1;33m» Installing core/wget[0m
-[1;32m☁ Determining[0m latest version of core/wget in the 'stable' channel
-[1;32m↓ Downloading[0m core/wget/1.19.4/20180608102523
-    1.75 KB / 530.06 KB | [>-----------------------------] 0.33 % 41.85 MB/s 0s     4.45 KB / 530.06 KB / [>----------------------------] 0.84 % 368.24 KB/s 1s     7.14 KB / 530.06 KB - [>----------------------------] 1.35 % 366.09 KB/s 1s     9.83 KB / 530.06 KB \ [>----------------------------] 1.86 % 323.18 KB/s 2s     12.53 KB / 530.06 KB | [>---------------------------] 2.36 % 303.65 KB/s 2s     15.06 KB / 530.06 KB / [>---------------------------] 2.84 % 269.63 KB/s 2s     17.75 KB / 530.06 KB - [>---------------------------] 3.35 % 279.34 KB/s 2s     20.45 KB / 530.06 KB \ [=>--------------------------] 3.86 % 300.39 KB/s 2s     23.14 KB / 530.06 KB | [=>--------------------------] 4.37 % 317.14 KB/s 2s     25.83 KB / 530.06 KB / [=>--------------------------] 4.87 % 331.47 KB/s 2s     28.53 KB / 530.06 KB - [=>--------------------------] 5.38 % 320.41 KB/s 2s     31.06 KB / 530.06 KB \ [=>--------------------------] 5.86 % 345.82 KB/s 1s     39.06 KB / 530.06 KB | [==>-------------------------] 7.37 % 360.53 KB/s 1s     47.06 KB / 530.06 KB / [==>-------------------------] 8.88 % 434.17 KB/s 1s     55.06 KB / 530.06 KB - [==>------------------------] 10.39 % 430.67 KB/s 1s     63.06 KB / 530.06 KB \ [===>-----------------------] 11.90 % 492.96 KB/s 1s     71.06 KB / 530.06 KB | [===>-----------------------] 13.41 % 500.17 KB/s 1s     79.06 KB / 530.06 KB / [====>----------------------] 14.91 % 556.30 KB/s 1s     87.06 KB / 530.06 KB - [====>----------------------] 16.42 % 575.82 KB/s 1s     95.06 KB / 530.06 KB \ [====>----------------------] 17.93 % 628.52 KB/s 1s     103.06 KB / 530.06 KB | [=====>--------------------] 19.44 % 625.41 KB/s 1s     111.06 KB / 530.06 KB / [=====>--------------------] 20.95 % 673.73 KB/s 1s     119.06 KB / 530.06 KB - [=====>--------------------] 22.46 % 698.93 KB/s 1s     127.06 KB / 530.06 KB \ [======>-------------------] 23.97 % 745.61 KB/s 1s     135.06 KB / 530.06 KB | [======>-------------------] 25.48 % 757.57 KB/s 1s     143.06 KB / 530.06 KB / [=======>------------------] 26.99 % 802.12 KB/s 0s     151.06 KB / 530.06 KB - [=======>------------------] 28.50 % 823.88 KB/s 0s     159.06 KB / 530.06 KB \ [=======>------------------] 30.01 % 867.25 KB/s 0s     167.06 KB / 530.06 KB | [========>-----------------] 31.52 % 864.18 KB/s 0s     175.06 KB / 530.06 KB / [========>-----------------] 33.03 % 905.24 KB/s 0s     183.06 KB / 530.06 KB - [========>-----------------] 34.54 % 924.92 KB/s 0s     191.06 KB / 530.06 KB \ [=========>----------------] 36.04 % 965.03 KB/s 0s     199.06 KB / 530.06 KB | [=========>----------------] 37.55 % 987.53 KB/s 0s     207.06 KB / 530.06 KB / [==========>-----------------] 39.06 % 1.00 MB/s 0s     215.06 KB / 530.06 KB - [===========>----------------] 40.57 % 1.03 MB/s 0s     223.06 KB / 530.06 KB \ [===========>----------------] 42.08 % 1.07 MB/s 0s     231.06 KB / 530.06 KB | [============>---------------] 43.59 % 1.03 MB/s 0s     239.06 KB / 530.06 KB / [============>---------------] 45.10 % 1.07 MB/s 0s     247.06 KB / 530.06 KB - [=============>--------------] 46.61 % 1.09 MB/s 0s     255.06 KB / 530.06 KB \ [=============>--------------] 48.12 % 1.12 MB/s 0s     263.06 KB / 530.06 KB | [=============>--------------] 49.63 % 1.15 MB/s 0s     271.06 KB / 530.06 KB / [==============>-------------] 51.14 % 1.18 MB/s 0s     279.06 KB / 530.06 KB - [==============>-------------] 52.65 % 1.19 MB/s 0s     287.06 KB / 530.06 KB \ [===============>------------] 54.16 % 1.23 MB/s 0s     295.06 KB / 530.06 KB | [===============>------------] 55.66 % 1.25 MB/s 0s     303.06 KB / 530.06 KB / [================>-----------] 57.17 % 1.28 MB/s 0s     311.06 KB / 530.06 KB - [================>-----------] 58.68 % 1.27 MB/s 0s     319.06 KB / 530.06 KB \ [================>-----------] 60.19 % 1.30 MB/s 0s     327.06 KB / 530.06 KB | [=================>----------] 61.70 % 1.33 MB/s 0s     335.06 KB / 530.06 KB / [=================>----------] 63.21 % 1.37 MB/s 0s     343.06 KB / 530.06 KB - [==================>---------] 64.72 % 1.39 MB/s 0s     351.06 KB / 530.06 KB \ [==================>---------] 66.23 % 1.43 MB/s 0s     359.06 KB / 530.06 KB | [==================>---------] 67.74 % 1.41 MB/s 0s     367.06 KB / 530.06 KB / [===================>--------] 69.25 % 1.44 MB/s 0s     375.06 KB / 530.06 KB - [===================>--------] 70.76 % 1.44 MB/s 0s     383.06 KB / 530.06 KB \ [====================>-------] 72.27 % 1.47 MB/s 0s     391.06 KB / 530.06 KB | [====================>-------] 73.78 % 1.49 MB/s 0s     399.06 KB / 530.06 KB / [=====================>------] 75.28 % 1.52 MB/s 0s     407.06 KB / 530.06 KB - [=====================>------] 76.79 % 1.55 MB/s 0s     415.06 KB / 530.06 KB \ [=====================>------] 78.30 % 1.58 MB/s 0s     423.06 KB / 530.06 KB | [======================>-----] 79.81 % 1.59 MB/s 0s     431.06 KB / 530.06 KB / [======================>-----] 81.32 % 1.62 MB/s 0s     439.06 KB / 530.06 KB - [=======================>----] 82.83 % 1.65 MB/s 0s     447.06 KB / 530.06 KB \ [=======================>----] 84.34 % 1.68 MB/s 0s     455.06 KB / 530.06 KB | [========================>---] 85.85 % 1.71 MB/s 0s     463.06 KB / 530.06 KB / [========================>---] 87.36 % 1.74 MB/s 0s     471.06 KB / 530.06 KB - [========================>---] 88.87 % 1.68 MB/s 0s     479.06 KB / 530.06 KB \ [=========================>--] 90.38 % 1.71 MB/s 0s     487.06 KB / 530.06 KB | [=========================>--] 91.89 % 1.74 MB/s 0s     495.06 KB / 530.06 KB / [==========================>-] 93.40 % 1.77 MB/s 0s     503.06 KB / 530.06 KB - [==========================>-] 94.91 % 1.76 MB/s 0s     511.06 KB / 530.06 KB \ [==========================>-] 96.41 % 1.79 MB/s 0s     519.06 KB / 530.06 KB | [============================] 97.92 % 1.82 MB/s 0s     527.06 KB / 530.06 KB / [============================] 99.43 % 1.85 MB/s 0s     530.06 KB / 530.06 KB - [=============================] 100.00 % 1.86 MB/s  
-[1;32m☛ Verifying[0m core/wget/1.19.4/20180608102523
-[1;32m→ Using[0m core/cacerts/2018.03.07/20180608102212
-[1;32m→ Using[0m core/gcc-libs/7.3.0/20180608091701
-[1;32m→ Using[0m core/glibc/2.27/20180608041157
-[1;32m→ Using[0m core/linux-headers/4.15.9/20180608041107
-[1;32m→ Using[0m core/openssl/1.0.2n/20180608102213
-[1;32m→ Using[0m core/pcre/8.41/20180608092740
-[1;32m→ Using[0m core/zlib/1.2.11/20180608050617
-[1;32m✓ Installed[0m core/wget/1.19.4/20180608102523
-[1;34m★ Install of core/wget/1.19.4/20180608102523 complete with 1 new packages installed.[0m
-   doha: Resolved dependency 'core/wget' to /hab/pkgs/core/wget/1.19.4/20180608102523
-[1;33m» Installing core/tar[0m
-[1;32m☁ Determining[0m latest version of core/tar in the 'stable' channel
-[1;32m☛ Verifying[0m core/tar/1.30/20180608093304
-[1;32m→ Using[0m core/acl/2.2.52/20180608091922
-[1;32m→ Using[0m core/attr/2.4.47/20180608091914
-[1;32m→ Using[0m core/glibc/2.27/20180608041157
-[1;32m→ Using[0m core/linux-headers/4.15.9/20180608041107
-[1;32m✓ Installed[0m core/tar/1.30/20180608093304
-[1;34m★ Install of core/tar/1.30/20180608093304 complete with 1 new packages installed.[0m
-   doha: Resolved dependency 'core/tar' to /hab/pkgs/core/tar/1.30/20180608093304
-[1;33m» Installing core/gzip[0m
-[1;32m☁ Determining[0m latest version of core/gzip in the 'stable' channel
-[1;32m↓ Downloading[0m core/gzip/1.9/20180608100716
-    1.76 KB / 61.75 KB | [>------------------------------] 2.85 % 46.64 MB/s 0s     4.45 KB / 61.75 KB / [==>---------------------------] 7.21 % 764.27 KB/s 0s     7.15 KB / 61.75 KB - [===>-------------------------] 11.57 % 619.68 KB/s 0s     9.84 KB / 61.75 KB \ [====>------------------------] 15.94 % 541.26 KB/s 0s     12.54 KB / 61.75 KB | [=====>----------------------] 20.30 % 332.06 KB/s 0s     15.06 KB / 61.75 KB / [======>---------------------] 24.39 % 374.14 KB/s 0s     17.76 KB / 61.75 KB - [========>-------------------] 28.76 % 381.04 KB/s 0s     20.45 KB / 61.75 KB \ [=========>------------------] 33.12 % 403.92 KB/s 0s     23.15 KB / 61.75 KB | [==========>-----------------] 37.48 % 450.52 KB/s 0s     25.84 KB / 61.75 KB / [===========>----------------] 41.85 % 471.29 KB/s 0s     28.54 KB / 61.75 KB - [============>---------------] 46.21 % 484.27 KB/s 0s     31.06 KB / 61.75 KB \ [==============>-------------] 50.30 % 488.40 KB/s 0s     39.06 KB / 61.75 KB | [=================>----------] 63.26 % 432.35 KB/s 0s     47.06 KB / 61.75 KB / [=====================>------] 76.21 % 520.53 KB/s 0s     55.06 KB / 61.75 KB - [========================>---] 89.17 % 538.74 KB/s 0s     61.75 KB / 61.75 KB \ [=============================] 100.00 % 603.65 KB/s  
-[1;32m☛ Verifying[0m core/gzip/1.9/20180608100716
-[1;32m→ Using[0m core/gcc-libs/7.3.0/20180608091701
-[1;32m→ Using[0m core/glibc/2.27/20180608041157
-[1;32m→ Using[0m core/grep/3.1/20180608092809
-[1;32m→ Using[0m core/less/530/20180608094202
-[1;32m→ Using[0m core/linux-headers/4.15.9/20180608041107
-[1;32m→ Using[0m core/ncurses/6.1/20180608091810
-[1;32m→ Using[0m core/pcre/8.41/20180608092740
-[1;32m✓ Installed[0m core/gzip/1.9/20180608100716
-[1;34m★ Install of core/gzip/1.9/20180608100716 complete with 1 new packages installed.[0m
-   doha: Resolved dependency 'core/gzip' to /hab/pkgs/core/gzip/1.9/20180608100716
-   doha: Setting up environment
-   doha: Populating runtime environment from dependencies
-   doha: Populating buildtime environment from dependencies
-   doha: Layering runtime environment on top of system environment
-   doha: Layering buildtime environment on top of system environment
-   doha: Setting PATH=/hab/pkgs/qago/hab-shell/1.0/20180823181732/bin:/hab/pkgs/core/docker/18.03.0/20180608150948/bin:/hab/pkgs/core/docker-compose/1.21.0/20180718153539/bin:/hab/pkgs/core/go/1.10.3/20180801151731/bin:/hab/pkgs/core/dep/0.5.0/20180731174047/bin:/hab/pkgs/core/git/2.18.0/20180806174821/bin:/hab/pkgs/core/wget/1.19.4/20180608102523/bin:/hab/pkgs/core/tar/1.30/20180608093304/bin:/hab/pkgs/core/gzip/1.9/20180608100716/bin:/hab/pkgs/core/acl/2.2.52/20180608091922/bin:/hab/pkgs/core/attr/2.4.47/20180608091914/bin:/hab/pkgs/core/bash/4.4.19/20180608092913/bin:/hab/pkgs/core/coreutils/8.29/20180608092141/bin:/hab/pkgs/core/gawk/4.2.0/20180608093856/bin:/hab/pkgs/core/glibc/2.27/20180608041157/bin:/hab/pkgs/core/grep/3.1/20180608092809/bin:/hab/pkgs/core/hab/0.61.0/20180815171844/bin:/hab/pkgs/core/libcap/2.25/20180608091936/bin:/hab/pkgs/core/ncurses/6.1/20180608091810/bin:/hab/pkgs/core/pcre/8.41/20180608092740/bin:/hab/pkgs/core/sed/4.4/20180608091938/bin:/hab/pkgs/core/sudo/1.8.18p1/20180609192018/bin:/hab/pkgs/core/sudo/1.8.18p1/20180609192018/sbin:/hab/pkgs/core/vim/8.0.1542/20180608104326/bin:/hab/pkgs/core/binutils/2.30/20180608050633/bin:/hab/pkgs/core/bzip2/1.0.6/20180608091727/bin:/hab/pkgs/core/expat/2.2.5/20180608094017/bin:/hab/pkgs/core/gdbm/1.14.1/20180608094002/bin:/hab/pkgs/core/libtool/2.4.6/20180608093951/bin:/hab/pkgs/core/openssl/1.0.2n/20180608102213/bin:/hab/pkgs/core/python/3.7.0/20180718152937/bin:/hab/pkgs/core/sqlite/3130000/20180608141313/bin:/hab/pkgs/core/curl/7.54.1/20180608142121/bin:/hab/pkgs/core/db/5.3.28/20180608094030/bin:/hab/pkgs/core/gettext/0.19.8/20180608100147/bin:/hab/pkgs/core/less/530/20180608094202/bin:/hab/pkgs/core/openssh/7.5p1/20180608142228/bin:/hab/pkgs/core/openssh/7.5p1/20180608142228/sbin:/hab/pkgs/core/openssh/7.5p1/20180608142228/libexec:/hab/pkgs/core/perl/5.26.1/20180608094208/bin:/hab/pkgs/core/xz/5.2.3/20180608100110/bin:/hab/pkgs/core/hab-plan-build/0.61.0/20180815173114/bin:/hab/pkgs/core/bash/4.3.42/20170513213519/bin:/hab/pkgs/core/binutils/2.25.1/20170513201927/bin:/hab/pkgs/core/bzip2/1.0.6/20170513212938/bin:/hab/pkgs/core/coreutils/8.25/20170513213226/bin:/hab/pkgs/core/file/5.24/20170513201915/bin:/hab/pkgs/core/findutils/4.4.2/20170513214305/bin:/hab/pkgs/core/gawk/4.1.3/20170513213646/bin:/hab/pkgs/core/grep/2.22/20170513213444/bin:/hab/pkgs/core/gzip/1.6/20170513214605/bin:/hab/pkgs/core/hab/0.61.0/20180815171844/bin:/hab/pkgs/core/rq/0.9.2/20170612005822/bin:/hab/pkgs/core/sed/4.2.2/20170513213123/bin:/hab/pkgs/core/tar/1.29/20170513213607/bin:/hab/pkgs/core/unzip/6.0/20180310001951/bin:/hab/pkgs/core/wget/1.19.1/20171024102323/bin:/hab/pkgs/core/xz/5.2.2/20170513214327/bin:/hab/pkgs/core/glibc/2.22/20170513201042/bin:/hab/pkgs/core/ncurses/6.0/20170513213009/bin:/hab/pkgs/core/acl/2.2.52/20170513213108/bin:/hab/pkgs/core/attr/2.4.47/20170513213059/bin:/hab/pkgs/core/libcap/2.24/20170513213120/bin:/hab/pkgs/core/pcre/8.38/20170513213423/bin:/hab/pkgs/core/less/481/20170513213936/bin:/hab/pkgs/core/libidn/1.32/20170513215043/bin:/hab/pkgs/core/openssl/1.0.2l/20171014213633/bin
-   doha: Clean the cache
-   doha: Setting build environment
-mkdir: created directory '/hab/cache/src/doha-1.0.12'
-   doha: Setting PREFIX=/hab/pkgs/hab-shell/doha/1.0.12/20180828122743
-   doha: Setting LD_RUN_PATH=/hab/pkgs/core/git/2.18.0/20180806174821/lib
-   doha: Setting CFLAGS=
-   doha: Setting CXXFLAGS=
-   doha: Setting CPPFLAGS=
-   doha: Setting LDFLAGS=-L/hab/pkgs/core/git/2.18.0/20180806174821/lib
-   doha: Setting PKG_CONFIG_PATH=
-   doha: Preparing to build
-   doha: Building
-   doha: Installing
-mkdir: created directory '/hab/pkgs/hab-shell/doha/1.0.12'
-mkdir: created directory '/hab/pkgs/hab-shell/doha/1.0.12/20180828122743'
-   doha: Writing configuration
-   doha: Writing service management scripts
-   doha: Stripping unneeded symbols from binaries and libraries
-   doha: Building package metadata
-   doha: Generating blake2b hashes of all files in the package
-   doha: Generating signed metadata FILES
-[1;33m» Signing doha_blake2bsums[0m
-[1;36m☛ Signing[0m doha_blake2bsums with hab-shell-20180516112716 to create /hab/pkgs/hab-shell/doha/1.0.12/20180828122743/FILES
-[1;34m★ Signed artifact /hab/pkgs/hab-shell/doha/1.0.12/20180828122743/FILES.[0m
-   doha: Creating manifest
-   doha: Generating package artifact
-/hab/pkgs/core/tar/1.29/20170513213607/bin/tar: Removing leading `/' from member names
-/hab/cache/artifacts/.hab-shell-doha-1.0.12-20180828122743-x86_64-linux.tar (1/1)
-  100 %           2252 B / 20.0 KiB = 0.110                                    
-[1;33m» Signing /hab/cache/artifacts/.hab-shell-doha-1.0.12-20180828122743-x86_64-linux.tar.xz[0m
-[1;36m☛ Signing[0m /hab/cache/artifacts/.hab-shell-doha-1.0.12-20180828122743-x86_64-linux.tar.xz with hab-shell-20180516112716 to create /hab/cache/artifacts/hab-shell-doha-1.0.12-20180828122743-x86_64-linux.hart
-[1;34m★ Signed artifact /hab/cache/artifacts/hab-shell-doha-1.0.12-20180828122743-x86_64-linux.hart.[0m
-'/hab/cache/artifacts/hab-shell-doha-1.0.12-20180828122743-x86_64-linux.hart' -> '/src/results/hab-shell-doha-1.0.12-20180828122743-x86_64-linux.hart'
-   doha: hab-plan-build cleanup
-   doha: 
-   doha: Source Path: /src
-   doha: Installed Path: /hab/pkgs/hab-shell/doha/1.0.12/20180828122743
-   doha: Artifact: /src/results/hab-shell-doha-1.0.12-20180828122743-x86_64-linux.hart
-   doha: Build Report: /src/results/last_build.env
-   doha: SHA256 Checksum: 0a805b890607b1cedf52044fc6e8037fb26b4184bf81f6d18a92d788c47210f6
-   doha: Blake2b Checksum: 324309bd830bf2982519019dc1cbaa7716b3cce5519e5bc7d16160d4c8d16b73
-   doha: 
-   doha: I love it when a plan.sh comes together.
-   doha: 
-   doha: Build time: 0m8s
-
-Script done on Tue Aug 28 12:27:51 2018
