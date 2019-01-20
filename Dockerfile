@@ -3,6 +3,7 @@ FROM alpine
 ARG HAB_BINARY_PATH
 
 ADD $HAB_BINARY_PATH /usr/bin/
+
 RUN apk add sudo
 RUN apk add bash
 RUN apk add acl
