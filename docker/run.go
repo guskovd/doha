@@ -2,17 +2,16 @@ package docker
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"os/user"
-	"log"
-	
+
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 	"golang.org/x/net/context"
 
 	mount "github.com/docker/docker/api/types/mount"
-
 )
 
 func StartDaemonIfNotRunning() {
@@ -26,13 +25,12 @@ func StartDaemonIfNotRunning() {
 
 	if err != nil {
 		RunContainer()
-	} else if(resp.State.Running == false) {
+	} else if resp.State.Running == false {
 		log.Println("Doha daemon in Dead state. Restarting ...")
 		StopContainer()
 		RunContainer()
 	}
 }
-
 
 func RunContainer() {
 	ctx := context.Background()
@@ -48,8 +46,7 @@ func RunContainer() {
 		ctx,
 		&container.Config{
 			Image: DohaImageLocal,
-			Cmd: []string{"tail", "-f", "/dev/null"},
-			User: fmt.Sprintf("%s:%s", current_user.Uid, current_user.Gid),
+			User:  fmt.Sprintf("%s:%s", current_user.Uid, current_user.Gid),
 		},
 		&container.HostConfig{
 			Mounts: []mount.Mount{
