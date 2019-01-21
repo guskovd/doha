@@ -1,0 +1,35 @@
+os_type: linux
+shell_type: bash
+
+provisioner:
+  name: shell
+  data_path: ./
+
+platforms:
+
+  - name: docker-macos10
+    os_type: linux
+    shell_type: bash
+    provisioner:
+      command: docker ps
+    transport:
+      name: rsync_ssh
+      username: vagrant
+      password: vagrant
+    driver_config:
+      name: docker
+      image: alpine
+      build_context: docker
+      dockerfile: <%= ENV['PWD'] %>/integration/Dockerfile
+      privileged: true
+      use_internal_docker_network: true
+      public_key: "<%= ENV['HOME'] %>/.ssh/id_rsa.pub"
+      private_key: "<%= ENV['HOME'] %>/.ssh/id_rsa"
+      volume:
+        - /opt/qemu:/opt/qemu
+      run_command:
+      username: vagrant
+
+suites:
+  - name: default
+
