@@ -12,6 +12,13 @@ Save the corresponding binary in the directory included in the PATH environment 
 
 e.g. /usr/local/bin/doha
 
+## Install via homebrew:
+
+```
+brew tap guskovd/doha
+brew install doha
+```
+
 ## Usage:
 
 ### doha shell
