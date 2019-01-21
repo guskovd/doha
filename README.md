@@ -6,11 +6,6 @@
 go get -u github.com/guskovd/doha
 ```
 
-## Installation via binary:
-
-Save the corresponding binary in the directory included in the PATH environment variable (/usr/bin, /usr/local/bin, etc ...)
-
-e.g. /usr/local/bin/doha
 
 ## Install via homebrew:
 
@@ -18,6 +13,13 @@ e.g. /usr/local/bin/doha
 brew tap guskovd/doha
 brew install doha
 ```
+
+## Installation via binary:
+
+Save the corresponding binary in the directory included in the PATH environment variable (/usr/bin, /usr/local/bin, etc ...)
+
+e.g. /usr/local/bin/doha
+
 
 ## Usage:
 
