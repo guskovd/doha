@@ -8,7 +8,11 @@ pkg_upstream_url="https://github.com/guskovd/doha"
 pkg_hab_shell_interpreter="bash"
 
 pkg_deps=(
-    qago/hab-shell
+    core/bash
+    core/coreutils
+    core/gawk
+    core/hab
+    core/sudo
     core/docker
     core/docker-compose
     core/go
@@ -17,6 +21,7 @@ pkg_deps=(
     core/wget
     core/tar
     core/gzip
+    guskovd/python-openstackclient
 )
 
 do_shell() {
