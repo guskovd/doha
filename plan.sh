@@ -25,6 +25,11 @@ pkg_deps=(
     core/gzip
     core/ruby/$RUBY_VERSION
     core/rsync
+    core/sshpass
+    core/gcc
+    core/gcc-libs
+    core/gox
+    core/make
     guskovd/python-openstackclient
 )
 
@@ -35,7 +40,7 @@ do_shell() {
     export BUNDLE_PATH=$ruby_bundle_path
 
     pushd "$( builtin cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" > /dev/null
-    bundle install --binstubs > /dev/null
+    bundle install --binstubs 
     popd > /dev/null
 
     export PATH="$( builtin cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.hab-shell/bin:$PATH"

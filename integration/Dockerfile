@@ -5,7 +5,7 @@ RUN apk add socat gzip qemu-img qemu qemu-system-x86_64
 RUN mkdir -p /opt/qemu/{sock,images,volumes}
 RUN mkdir -p /opt/qemu/local/images
 
-CMD qemu-system-x86_64 -enable-kvm -m 4096 -cpu Penryn,kvm=off,vendor=GenuineIntel \
+CMD qemu-system-x86_64 -enable-kvm -m 4096 -cpu Penryn,kvm=off,vendor=GenuineIntel,vmx,rdtscp \
           -vnc 0.0.0.0:0 \
 	  -machine pc-q35-2.4 \
 	  -smp 4,cores=2 \

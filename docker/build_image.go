@@ -26,7 +26,7 @@ RUN adduser -D -g $groupid -G wheel -u $userid -h $homedir $username
 RUN addgroup -g $docker_groupid -S docker
 RUN adduser $username docker
 
-CMD sudo setfacl -m user:$(whoami):rw /var/run/docker.sock && tail -f /dev/null
+CMD sudo chmod 666 /var/run/docker.sock && tail -f /dev/null
 `)
 
 // BuildImage common
@@ -44,7 +44,7 @@ func BuildImage() {
 	current_user, err := user.Current()
 	current_group, err := user.LookupGroupId(current_user.Gid)
 
-	docker_group, err := user.LookupGroup("docker")
+	// docker_group, err := user.LookupGroup("docker")
 	docker_binary, lookErr := exec.LookPath("docker")
 
 	if lookErr != nil {
@@ -59,7 +59,7 @@ func BuildImage() {
 		"--build-arg", fmt.Sprintf("groupname=%s", current_group.Name),
 		"--build-arg", fmt.Sprintf("homedir=%s", os.Getenv("HOME")),
 		// "--build-arg", fmt.Sprintf("groupid=%s", current_group.Gid),
-		"--build-arg", fmt.Sprintf("docker_groupid=%s", docker_group.Gid),
+		// "--build-arg", fmt.Sprintf("docker_groupid=%s", docker_group.Gid),
 		"-t", DohaImageLocal,
 		tmpdir,
 	).CombinedOutput()

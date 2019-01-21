@@ -1,6 +1,7 @@
 .bundle
 .kitchen
 /bin
+dist
 vendor
 artifacts
 doha
