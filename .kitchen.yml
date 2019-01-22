@@ -11,9 +11,11 @@ platforms:
     os_type: linux
     shell_type: bash
     provisioner:
-      command: docker ps
+      root_path: "/tmp/kitchen"
+      command: cd /tmp/kitchen/data; . integration/init.sh
     transport:
       name: rsync_ssh
+      protocol: ssh
       username: vagrant
       password: vagrant
     driver_config:

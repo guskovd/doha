@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/guskovd/kitchen-transport-rsync-ssh.git
-  revision: 853ca715fb0571602780e62773cd652060abaa6d
+  revision: 9d1ba489748b82be34495c6450575851bc012812
   specs:
     kitchen-transport-rsync-ssh (0.0.2)
       test-kitchen
