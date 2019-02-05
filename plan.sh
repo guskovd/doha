@@ -10,27 +10,27 @@ pkg_hab_shell_interpreter="bash"
 RUBY_VERSION=2.5.1
 
 pkg_deps=(
-    core/bash
-    core/coreutils
-    core/gawk
-    core/hab
-    core/sudo
-    core/docker
-    core/docker-compose
-    core/go
-    core/dep
-    core/git
-    core/wget
-    core/tar
-    core/gzip
-    core/ruby/$RUBY_VERSION
-    core/rsync
-    core/sshpass
-    core/gcc
-    core/gcc-libs
-    core/gox
-    core/make
-    guskovd/python-openstackclient
+    core/bash/4.4.19/20180608092913
+    core/coreutils/8.29/20180608092141
+    core/dep/0.5.0/20180731174047
+    core/docker-compose/1.21.0/20181212192853
+    core/docker/18.03.0/20180608150948
+    core/gawk/4.2.0/20180608093856
+    core/gcc-libs/7.3.0/20180608091701
+    core/gcc/7.3.0/20180608051919
+    core/git/2.18.0/20181218161804
+    core/go/1.11.3/20181214192430
+    core/gox/master/20180608163536
+    core/gzip/1.9/20180608100716
+    core/hab/0.73.0/20190115004751
+    core/make/4.2.1/20180608100733
+    core/rsync/3.1.2/20180608145950
+    core/ruby/2.5.1/20181212185250
+    core/sshpass/1.06/20180608151129
+    core/sudo/1.8.18p1/20181219210923
+    core/tar/1.30/20180608093304
+    core/wget/1.19.4/20181212185851
+    guskovd/python-openstackclient/1.9.0/20190121115438
 )
 
 do_shell() {
